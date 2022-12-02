@@ -1,8 +1,9 @@
 #![allow(non_snake_case)]
 
-use crate::day01::solve;
+use crate::{day01::solve, day02::{strat1, strat2}};
 
 pub mod day01;
+pub mod day02;
 
 pub mod utils {
     use std::{
@@ -26,4 +27,10 @@ fn main() {
 
     solve("test");
     solve("prod");
+
+    dbg!(strat1("test"));
+    dbg!(strat1("prod"));
+
+    dbg!(strat2("test"));
+    dbg!(strat2("prod"));
 }
