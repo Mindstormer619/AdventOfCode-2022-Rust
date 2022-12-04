@@ -46,14 +46,14 @@ impl Round {
 
 pub fn strat1(input: &str) -> i32 {
     let lines = linesFromFile(format!("src/day02/{}.txt", input));
-    let rounds: Vec<Round> = collectInput(lines);
+    let rounds = collectInput(lines);
 
     rounds.iter().map(|r| -> i32 { r.score1(r.player1) }).sum()
 }
 
 pub fn strat2(input: &str) -> i32 {
     let lines = linesFromFile(format!("src/day02/{}.txt", input));
-    let rounds: Vec<Round> = collectInput(lines);
+    let rounds = collectInput(lines);
 
     rounds.iter().map(|r| -> i32 { r.score2() })
 	.sum()

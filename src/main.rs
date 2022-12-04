@@ -1,11 +1,11 @@
 #![allow(non_snake_case)]
+#![allow(dead_code)]
 
-use crate::{day01::solve, day02::{strat1, strat2}};
+mod day01;
+mod day02;
+mod day03;
 
-pub mod day01;
-pub mod day02;
-
-pub mod utils {
+mod utils {
     use std::{
         fs::File,
         io::{BufRead, BufReader},
@@ -25,12 +25,9 @@ pub mod utils {
 fn main() {
     println!("Hello, elves!");
 
-    solve("test");
-    solve("prod");
+    dbg!(day03::sumOfPriorities("test"));
+    dbg!(day03::sumOfPriorities("prod"));
 
-    dbg!(strat1("test"));
-    dbg!(strat1("prod"));
-
-    dbg!(strat2("test"));
-    dbg!(strat2("prod"));
+    dbg!(day03::elfGroups("test"));
+    dbg!(day03::elfGroups("prod"));
 }
