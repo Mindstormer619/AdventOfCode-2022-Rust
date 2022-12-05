@@ -4,6 +4,7 @@
 mod day01;
 mod day02;
 mod day03;
+mod day04;
 
 mod utils {
     use std::{
@@ -24,10 +25,12 @@ mod utils {
 
 fn main() {
     println!("Hello, elves!");
+    // dbg!(day03::sumOfPriorities("test"));
+    // dbg!(day03::sumOfPriorities("prod"));
+    //
+    // dbg!(day03::elfGroups("test"));
+    // dbg!(day03::elfGroups("prod"));
 
-    dbg!(day03::sumOfPriorities("test"));
-    dbg!(day03::sumOfPriorities("prod"));
-
-    dbg!(day03::elfGroups("test"));
-    dbg!(day03::elfGroups("prod"));
+    day04::solve("test");
+    day04::solve("prod");
 }
