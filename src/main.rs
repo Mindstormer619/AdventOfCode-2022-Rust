@@ -34,4 +34,7 @@ fn main() {
 
 	// day04::solve("test");
 	// day04::solve("prod");
+
+	day05::solve("src/day05/test.txt");
+	day05::solve("src/day05/prod.txt");
 }
