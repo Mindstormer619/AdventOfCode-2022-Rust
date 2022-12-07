@@ -6,6 +6,7 @@ mod day02;
 mod day03;
 mod day04;
 mod day05;
+mod day06;
 
 mod utils {
 	use std::{
@@ -35,6 +36,9 @@ fn main() {
 	// day04::solve("test");
 	// day04::solve("prod");
 
-	day05::solve("src/day05/test.txt");
-	day05::solve("src/day05/prod.txt");
+	// day05::solve("src/day05/test.txt");
+	// day05::solve("src/day05/prod.txt");
+
+	day06::solve("src/day06/test.txt");
+	day06::solve("src/day06/prod.txt");
 }

@@ -1,6 +1,6 @@
-use std::mem;
-use regex::Regex;
 use crate::utils::linesFromFile;
+use regex::Regex;
+use std::mem;
 
 type CharStack = Vec<char>;
 
@@ -14,17 +14,16 @@ pub fn solve(input: &str) {
 	let movePortion = lines.iter().filter(|l| l.starts_with("move"));
 
 	let moveRegex = Regex::new(r"move ([0-9]+) from ([0-9]+) to ([0-9]+)").unwrap();
-	let moves: Vec<Move> = movePortion.map(|m|
-		{
+	let moves: Vec<Move> = movePortion
+		.map(|m| {
 			let captures = moveRegex.captures(m).unwrap();
 			Move {
 				count: captures.get(1).unwrap().as_str().parse::<u32>().unwrap(),
 				from: captures.get(2).unwrap().as_str().parse::<usize>().unwrap() - 1,
 				to: captures.get(3).unwrap().as_str().parse::<usize>().unwrap() - 1,
 			}
-		}
-	).collect();
-
+		})
+		.collect();
 
 	dbg!(singleMove(&mut stacks, &moves));
 
